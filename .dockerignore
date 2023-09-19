@@ -1,0 +1,10 @@
+# Dirs
+ __pycache__
+venv
+.idea
+
+# Files
+*.md
+*.cfg
+.gitignore
+debug.py

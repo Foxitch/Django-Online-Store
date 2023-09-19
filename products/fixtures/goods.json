@@ -1,0 +1,184 @@
+[
+   {
+      "model":"products.product",
+      "pk":1,
+      "fields":{
+         "name":"Темно-синие широкие строгие брюки ASOS DESIGN",
+         "description":"Легкая эластичная ткань сирсакер Фактурная ткань.",
+         "price":"50.99",
+         "quantity":100,
+         "image":"products_images/Dark-blue-wide-leg-ASOs-DESIGN-trousers.png",
+         "stripe_product_price_id":"price_1Nqye4HnN5rmTUhPEiOfz9Ib",
+         "category":1
+      }
+   },
+   {
+      "model":"products.product",
+      "pk":2,
+      "fields":{
+         "name":"Черные туфли на платформе с 3 парами люверсов Dr Martens 1461 Bex",
+         "description":"Гладкий кожаный верх. Натуральный материал.",
+         "price":"135.90",
+         "quantity":100,
+         "image":"products_images/Black-Dr-Martens-shoes.png",
+         "stripe_product_price_id":"price_1Nqye5HnN5rmTUhPP5pITbL4",
+         "category":2
+      }
+   },
+   {
+      "model":"products.product",
+      "pk":3,
+      "fields":{
+         "name":"Коричневый спортивный oversized-топ ASOS DESIGN",
+         "description":"Материал с плюшевой текстурой. Удобный и мягкий.",
+         "price":"133.40",
+         "quantity":100,
+         "image":"products_images/Brown-sports-oversized-top-ASOS-DESIGN.png",
+         "stripe_product_price_id":"price_1Nqye6HnN5rmTUhPwdtxSUix",
+         "category":1
+      }
+   },
+   {
+      "model":"products.product",
+      "pk":4,
+      "fields":{
+         "name":"Синяя куртка The North Face",
+         "description":"Гладкая ткань. Водонепроницаемое покрытие. Легкий и теплый пуховый наполнитель.",
+         "price":"550.20",
+         "quantity":100,
+         "image":"products_images/Blue-jacket-The-North-Face.png",
+         "stripe_product_price_id":"price_1Nqye6HnN5rmTUhPBHNrLIUu",
+         "category":1
+      }
+   },
+   {
+      "model":"products.product",
+      "pk":5,
+      "fields":{
+         "name":"Черный рюкзак Nike Heritage",
+         "description":"Плотная ткань. Легкий материал.",
+         "price":"80.00",
+         "quantity":100,
+         "image":"products_images/Black-Nike-Heritage-backpack.png",
+         "stripe_product_price_id":"price_1Nqye7HnN5rmTUhPq9prIcWD",
+         "category":3
+      }
+   },
+   {
+      "model":"products.product",
+      "pk":6,
+      "fields":{
+         "name":"Красная курта Nike",
+         "description":"Женская",
+         "price":"430.00",
+         "quantity":100,
+         "image":"products_images/red-jacket_ECi5lMo.jpeg",
+         "stripe_product_price_id":"price_1Nqye7HnN5rmTUhPkfpBDcsd",
+         "category":1
+      }
+   },
+   {
+      "model":"products.product",
+      "pk":7,
+      "fields":{
+         "name":"Infindini Спортивные брюки женские бананы свободные",
+         "description":"Хлопок 70%, полиэстер 30%",
+         "price":"30.00",
+         "quantity":100,
+         "image":"products_images/3_MpWpi01.jpeg",
+         "stripe_product_price_id":"price_1NqzOGHnN5rmTUhPvGiH5eLj",
+         "category":1
+      }
+   },
+   {
+      "model":"products.product",
+      "pk":8,
+      "fields":{
+         "name":"POMIDORKA Джинсы с высокой посадкой скинни",
+         "description":"Эластичный и дышащий материал, стрейчевые skinny",
+         "price":"77.91",
+         "quantity":100,
+         "image":"products_images/2_55nZYn2.jpeg",
+         "stripe_product_price_id":"price_1NqzQ6HnN5rmTUhPiBjajgJG",
+         "category":1
+      }
+   },
+   {
+      "model":"products.product",
+      "pk":9,
+      "fields":{
+         "name":"CROCS Сабо LiteRide 360",
+         "description":"Обновленные сабо Crocs LiteRide 360 сочетают спортивный стиль и комфорт высокого уровня.",
+         "price":"131.83",
+         "quantity":100,
+         "image":"products_images/1_k0Vmxzl.jpeg",
+         "stripe_product_price_id":"price_1NqzROHnN5rmTUhP9A4Q57wE",
+         "category":2
+      }
+   },
+   {
+      "model":"products.product",
+      "pk":10,
+      "fields":{
+         "name":"Alessio Nesca Ботинки мужские демисезонные",
+         "description":"Стильные ботинки бренда Alessio Nesca изготовлены из натуральной замши. Данная модель отлично справляется с неблагоприятными погодными условиями, выдерживая перепады температур.",
+         "price":"172.66",
+         "quantity":100,
+         "image":"products_images/1_1.jpeg",
+         "stripe_product_price_id":"price_1NqzSXHnN5rmTUhPQw5vcU6I",
+         "category":2
+      }
+   },
+   {
+      "model":"products.product",
+      "pk":11,
+      "fields":{
+         "name":"Bogner Кроссовки BOGNER 12320275/Темно-синий, белый",
+         "description":"Мужские кроссовки от немецкого бренда BOGNER из натуральной кожи.",
+         "price":"1200.00",
+         "quantity":100,
+         "image":"products_images/1_2.jpeg",
+         "stripe_product_price_id":"price_1NqzUMHnN5rmTUhPuNLMPFPp",
+         "category":2
+      }
+   },
+   {
+      "model":"products.product",
+      "pk":12,
+      "fields":{
+         "name":"MGX Ботинки женские зимние на платформе берцы высокие с мехом",
+         "description":"Представляем вам нашу коллекцию женских зимних ботинок - идеальный выбор для холодного времени года.",
+         "price":"126.50",
+         "quantity":100,
+         "image":"products_images/1_3_No1gE2J.jpeg",
+         "stripe_product_price_id":"price_1NqzXZHnN5rmTUhPRtlG8Xfz",
+         "category":2
+      }
+   },
+   {
+      "model":"products.product",
+      "pk":13,
+      "fields":{
+         "name":"Baden Ботинки",
+         "description":"Ботинки мужские зимние представлены в черном цвете. Выполнены из натуральной кожи, которая обеспечит Вашим ногам тепло.",
+         "price":"305.10",
+         "quantity":100,
+         "image":"products_images/1_4.jpeg",
+         "stripe_product_price_id":"price_1NqzZJHnN5rmTUhP78cOk71C",
+         "category":2
+      }
+   },
+   {
+      "model":"products.product",
+      "pk":14,
+      "fields":{
+         "name":"Катюffка Атласный бант для волос на заколке",
+         "description":"Тренд 2023 года - бант из атласной ленты на заколке автомат. Размер банта 15 см на 23 см.",
+         "price":"12.67",
+         "quantity":100,
+         "image":"products_images/1_5.jpeg",
+         "stripe_product_price_id":"price_1NqzajHnN5rmTUhPekuEYnXA",
+         "category":3
+      }
+   }
+]

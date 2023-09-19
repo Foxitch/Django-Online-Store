@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+    web:
+        build: .
+        container_name: store_app
+        command: >
+            bash -c "python manage.py makemigrations &&
+                     python manage.py migrate &&
+                     python manage.py loaddata users/fixtures/users.json &&
+                     python manage.py loaddata products/fixtures/categories.json &&
+                     python manage.py loaddata products/fixtures/goods.json &&
+                     python manage.py loaddata store/fixtures/providers.json &&
+                     python manage.py loaddata store/fixtures/sites.json &&
+                     python manage.py runserver 0.0.0.0:8000"
+        env_file:
+            .env.docker
+        ports:
+            - "8000:8000"
+        depends_on:
+            - postgresdb
+            - redis
+    celery:
+        build: .
+        command: celery -A store worker -l INFO
+        container_name: store_celery
+        env_file:
+            .env.docker
+        depends_on:
+            - web
+            - redis
+    stripe:
+        image: stripe/stripe-cli
+        command: listen --forward-to 0.0.0.0:8000/webhook/stripe/
+        container_name: store_stripe
+        env_file:
+            .env.docker
+        depends_on:
+            - web
+    postgresdb:
+        image: postgres
+        container_name: store_pdb
+        volumes:
+            - postgres_data:/var/lib/postgresql/data/
+        env_file:
+            .env.docker
+    redis:
+        image: redis
+        container_name: store_redis
+volumes:
+    postgres_data: null
