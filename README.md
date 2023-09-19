@@ -2,7 +2,8 @@
 This Django project utilizes Redis for caching data and Celery 
 for asynchronous task processing. The project also features integration with Stripe for payment processing, and includes a REST API for interacting with project data.
 
-If you choose to launch the project without modifying the [ENV file](.env.example), email confirmations will be sent to the console, while Stripe webhook functionality will not be available. However, payments will still be processed successfully.
+If you choose to launch the project without modifying the [ENV file](.env.example) (only Django secret key need to be updated), 
+email confirmations will be sent to the console, while Stripe webhook functionality will not be available. However, payments will still be processed successfully.
 
 OAuth 2.0 works only with GitHub:) because of http connection
 
