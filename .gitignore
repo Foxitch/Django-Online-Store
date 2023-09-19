@@ -1,0 +1,9 @@
+# Dirs
+ __pycache__
+venv
+.idea
+
+# Files
+debug.py
+.env.docker
+.env.local
