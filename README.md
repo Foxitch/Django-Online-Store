@@ -1,4 +1,4 @@
-# Readme #
+# Django Store #
 This Django project utilizes Redis for caching data and Celery 
 for asynchronous task processing. The project also features integration with Stripe for payment processing, and includes a REST API for interacting with project data.
 

@@ -7,3 +7,4 @@ venv
 debug.py
 .env.docker
 .env.local
+*.pyc
