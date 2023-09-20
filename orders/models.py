@@ -15,15 +15,20 @@ class Order(models.Model):
     status = models.SmallIntegerField(default=OrderStatus.CREATED, choices=OrderStatus.STATUSES)
     initiator = models.ForeignKey(to=User, on_delete=models.CASCADE)
 
+    def update_basket_history_after_order_creation(self) -> None:
+        baskets = Basket.objects.filter(user=self.initiator)
+        self.basket_history = {
+            'items': [item.de_json() for item in baskets],
+            'total_sum': float(baskets.total_sum()),
+            'status': self.status
+        }
+        self.save()
+
     def update_after_payment(self) -> None:
         baskets = Basket.objects.filter(user=self.initiator)
         self.status = OrderStatus.PAID
-        self.basket_history = {
-            'purchased_items': [item.de_json() for item in baskets],
-            'total_sum': float(baskets.total_sum())
-        }
-        baskets.delete()
         self.save()
+        baskets.delete()
 
     def __str__(self) -> str:
         return f'Order #{self.id} | {self.first_name} | {self.last_name}'

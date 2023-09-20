@@ -1,3 +1,5 @@
+from http import HTTPStatus
+
 import stripe
 from django.conf import settings
 from django.db.models import QuerySet
@@ -53,8 +55,7 @@ class OrderCreateView(TitleMixin, CreateView):
     success_url = reverse_lazy('orders:order_create')
     title = 'Store - Оформление заказа'
 
-    def post(self, request, *args, **kwargs):
-        super().post(request, *args, **kwargs)
+    def get_checkout_session_url(self) -> str:
         baskets = Basket.objects.filter(user=self.request.user)
         checkout_session = stripe.checkout.Session.create(
             line_items=baskets.create_stripe_items(),
@@ -63,7 +64,13 @@ class OrderCreateView(TitleMixin, CreateView):
             success_url=settings.DOMAIN_NAME + reverse('orders:order_success'),
             cancel_url=settings.DOMAIN_NAME + reverse('orders:order_canceled'),
         )
-        return HttpResponseRedirect(checkout_session.url, status=303)
+        return checkout_session.url
+
+    def post(self, request, *args, **kwargs):
+        super().post(request, *args, **kwargs)
+        order = Order.objects.get(id=self.object.id)
+        order.update_basket_history_after_order_creation()
+        return HttpResponseRedirect(self.get_checkout_session_url(), status=HTTPStatus.SEE_OTHER)
 
     def form_valid(self, form: OrderForm) -> HttpResponseRedirect:
         form.instance.initiator = self.request.user

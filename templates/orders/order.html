@@ -18,7 +18,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                        {% for purchased_item in object.basket_history.purchased_items %}
+                        {% for purchased_item in object.basket_history.items %}
                             <tr>
                                 <th scope="row">{{ purchased_item.product_name }}</th>
                                 <td>{{ purchased_item.quantity }}</td>
