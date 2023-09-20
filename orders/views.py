@@ -89,10 +89,10 @@ def stripe_webhook_view(request):
         )
     except ValueError:
         # Invalid payload
-        return HttpResponse(status=400)
+        return HttpResponse(status=HTTPStatus.BAD_REQUEST)
     except SignatureVerificationError:
         # Invalid signature
-        return HttpResponse(status=400)
+        return HttpResponse(status=HTTPStatus.BAD_REQUEST)
 
     # Handle the checkout.session.completed event
     if event['type'] == 'checkout.session.completed':
@@ -105,7 +105,7 @@ def stripe_webhook_view(request):
         fulfill_order(session=session)
 
     # Passed signature verification
-    return HttpResponse(status=200)
+    return HttpResponse(status=HTTPStatus.OK)
 
 
 def fulfill_order(session: Session) -> None:
