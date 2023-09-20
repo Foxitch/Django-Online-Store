@@ -37,6 +37,7 @@ python manage.py loaddata store/fixtures/providers.json
 python manage.py loaddata store/fixtures/sites.json
 python manage.py runserver 127.0.0.1:8000
 ```
+* Start Redis
 * Start Celery:
 ```commandline
 celery -A store worker -l INFO
