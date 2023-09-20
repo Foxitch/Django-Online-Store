@@ -47,9 +47,9 @@ env = environ.Env(
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Take environment variables from .env file
-# environ.Env.read_env(BASE_DIR / '.env.local')
+environ.Env.read_env(BASE_DIR / '.env.local')
 # environ.Env.read_env(BASE_DIR / '.env.docker')
-environ.Env.read_env(BASE_DIR / '.env.example')
+# environ.Env.read_env(BASE_DIR / '.env.example')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
